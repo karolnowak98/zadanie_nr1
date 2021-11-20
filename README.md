@@ -38,7 +38,7 @@ Wykonanie zadań
   
     Odp. "docker logs zadanie_nr1"
     
-   (Efekt polecenia)
+  (Efekt polecenia)
    
    ![image](https://user-images.githubusercontent.com/74615234/142735718-e1425498-e1a3-4347-8625-820a8e3ad953.png)
     
@@ -46,7 +46,7 @@ Wykonanie zadań
   
     Odp. "docker image inspect zadanie_nr1 | jq '.[].RootFS.Layers'"
     
-   (Efekt polecenia)
+  (Efekt polecenia)
    
    ![image](https://user-images.githubusercontent.com/74615234/142735773-84e25616-1d32-45e6-bac4-76b409a7837e.png)
 
@@ -62,7 +62,7 @@ przenieść stworzony obraz na swoje konto na DockerHub
     
     "docker build https://github.com/karolnowak98/zadanie1.git#main: -f Dockerfile_zad1"
     
-   (Efekt polecenia)
+  (Efekt polecenia)
    
 
     Aby przenieść stworzony obraz na swoje konto na Docker hub, należy wpierw się zalogować za pomocą polecenia docker login, a następnie należy skorzystać z polecenia:
@@ -73,7 +73,7 @@ przenieść stworzony obraz na swoje konto na DockerHub
     
     "docker image push karolnowak98/zadanie_nr1"
     
-   (Efekt polecenia)
+  (Efekt polecenia)
    
    ![image](https://user-images.githubusercontent.com/74615234/142739839-95f9b48a-cec9-4b26-a92c-d752c143ce0b.png)
 
