@@ -12,7 +12,9 @@ Wykonanie zadań
 
   a. zbudowania opracowanego obrazu kontenera
 
-    Odp. "docker build -t zadanie_nr1 -f Dockerfile_zad1 ."
+   Odp. 
+    
+    "docker build -t zadanie_nr1 -f Dockerfile_zad1 ."
 
   (Efekt polecenia)
 
@@ -24,7 +26,9 @@ Wykonanie zadań
   
   b. uruchomienia kontenera na podstawie zbudowanego obrazu:
   
-    Odp. "docker run -it --name zadanie_nr1 -p 8080:8080 zadanie_nr1"
+   Odp. 
+    
+    "docker run -it --name zadanie_nr1 -p 8080:8080 zadanie_nr1"
     
   (Efekt polecenia - w terminalu)
     
@@ -36,7 +40,9 @@ Wykonanie zadań
 
   c.  sposobu uzyskania informacji, które wygenerował serwer w trakcie uruchamiana kontenera
   
-    Odp. "docker logs zadanie_nr1"
+   Odp. 
+    
+    "docker logs zadanie_nr1"
     
   (Efekt polecenia)
    
@@ -44,7 +50,9 @@ Wykonanie zadań
     
   d.  sprawdzenia, ile warstw posiada zbudowany obraz
   
-    Odp. "docker image inspect zadanie_nr1 | jq '.[].RootFS.Layers'"
+   Odp. 
+   
+    "docker image inspect zadanie_nr1 | jq '.[].RootFS.Layers'"
     
   (Efekt polecenia)
    
@@ -54,22 +62,23 @@ Wykonanie zadań
 zbudować obraz wykorzystując bezpośrednio link do Dockerfile umieszczonego na GitHub oraz jak
 przenieść stworzony obraz na swoje konto na DockerHub
 
-    Odp. Aby zbudować obraz wykorzystując bezpośredni link do Dockerfile umieszczonego na platformie Github, należy skorzystać z polecenia:
+   Odp. Aby zbudować obraz wykorzystując bezpośredni link do Dockerfile umieszczonego na platformie Github, należy skorzystać z polecenia:
     
     "docker build 'link do repozytorium' -f 'nazwa pliku z rozszerzeniem dockerfile'"
 
-    Dla mojego repozytorium polecenie to będzie wyglądało następująco:
+   Dla mojego repozytorium polecenie to będzie wyglądało następująco:
     
     "docker build https://github.com/karolnowak98/zadanie_nr1.git#main: -f Dockerfile_zad1"
     
   (Efekt polecenia)
    
+   ![image](https://user-images.githubusercontent.com/74615234/142740527-d000ecca-d5b3-4e5a-96cb-7d9a453e6d2e.png)
 
-    Aby przenieść stworzony obraz na swoje konto na Docker hub, należy wpierw się zalogować za pomocą polecenia docker login, a następnie należy skorzystać z polecenia:
+   Aby przenieść stworzony obraz na swoje konto na Docker hub, należy wpierw się zalogować za pomocą polecenia docker login, a następnie należy skorzystać z polecenia:
 
     "docker image push 'nazwa uzytkownika na dockerhub'/'nazwa repozytorium'/:'tag'"
     
-    Dla mojego konta i repozytorium na dockerhub oraz tagu polecenie to będzie wyglądało następująco:
+   Dla mojego konta i repozytorium na dockerhub oraz tagu polecenie to będzie wyglądało następująco:
     
     "docker image push karolnowak98/zadanie_nr1"
     
