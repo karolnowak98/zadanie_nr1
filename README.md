@@ -22,7 +22,7 @@ Wykonanie zadań
 
   (Potwierdzenie utworzenia obrazu)
 
-   ![image](https://user-images.githubusercontent.com/74615234/142735386-0a966be2-bc5c-4377-9ec1-61d6df7f4c7c.png)
+   ![image](https://user-images.githubusercontent.com/74615234/142741524-ad48ec23-e4b0-496d-8b1e-da5d858801ee.png)
   
   b. uruchomienia kontenera na podstawie zbudowanego obrazu:
   
