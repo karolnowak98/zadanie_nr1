@@ -60,7 +60,7 @@ przenieść stworzony obraz na swoje konto na DockerHub
 
     Dla mojego repozytorium polecenie to będzie wyglądało następująco:
     
-    "docker build https://github.com/karolnowak98/zadanie1.git#main: -f Dockerfile_zad1"
+    "docker build https://github.com/karolnowak98/zadanie_nr1.git#main: -f Dockerfile_zad1"
     
   (Efekt polecenia)
    
@@ -77,5 +77,5 @@ przenieść stworzony obraz na swoje konto na DockerHub
    
    ![image](https://user-images.githubusercontent.com/74615234/142739839-95f9b48a-cec9-4b26-a92c-d752c143ce0b.png)
 
-   Link do dockerhuba: https://hub.docker.com/r/karolnowak98/zadanie_nr1 
+   Link do dockerhuba: https://hub.docker.com/r/karolnowak98/zadanie_nr1
    
