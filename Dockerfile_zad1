@@ -1,0 +1,26 @@
+#korzystam z obrazu node:alpine do zbudowania szkieletu przyszlego obrazu
+FROM node:alpine as builder
+
+#ustawiam folder roboczy
+WORKDIR /usr/app
+
+#kopiuje potrzebne pliki do folderu roboczego
+COPY ./package.json index.js ./
+
+#w obrazie bazowym pobieranego z githuba jest zainstalowany system paczek npm
+#bez modulow z 'devDependencies' dzieki czemu obraz mniej wazy
+#podany obraz jednak nie posiada frameworka express
+#z ktorego ja korzystam, wiec instaluje go
+RUN npm install express
+
+#tworze obraz korzystajac ze skompresowanego obrazu Node.js
+FROM astefanutti/scratch-node
+
+#ustawiam etykiete autora
+LABEL author="Karol Nowak"
+
+#kopiuje zawartosc z uprzednio utworzonego obrazu (pliki .json i .js oraz zainstalowany express) do folderu kontenera
+COPY --from=builder /usr/app ./
+
+#uruchamiam serwer za pomoca node
+ENTRYPOINT ["node", "index.js"]
